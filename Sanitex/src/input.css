@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sanitex-aqua: #bee9e8;
+  --color-sanitex-blue: #62b6cb;
+  --color-sanitex-navy: #1b4965;
+  --color-sanitex-sky: #cae9ff;
+  --color-sanitex-ocean: #5fa8d3;
+}
