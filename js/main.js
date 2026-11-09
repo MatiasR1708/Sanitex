@@ -1,15 +1,4 @@
-const comparador = document.getElementById('comparador');
-const control = document.getElementById('control-resultados');
-
-if (comparador && control) {
-  const actualizarComparador = () => {
-    comparador.style.setProperty('--division', `${control.value}%`);
-  };
-
-  actualizarComparador();
-  control.addEventListener('input', actualizarComparador);
-}
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
