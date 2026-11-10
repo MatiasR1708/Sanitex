@@ -1,13 +1,267 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/output.css" />
     <title>Sanitex</title>
-</head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-</body>
+  </head>
+  <body>
+    <!-- Encabezado Responsive Optimizado -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Logotipo y Nombre -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <img
+            src="img/sanitex-logotipo.jpg"
+            alt="Logotipo Sanitex"
+            class="w-10 h-10 rounded-xl object-cover shadow-sm"
+          />
+          <span
+            class="font-['Montserrat'] font-bold text-xl text-sanitex-navy tracking-tight"
+          >
+            Sanitex
+          </span>
+        </a>
+
+        <!-- Menú de navegación principal (Solo visible en pantallas anchas lg: 1024px+) -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+          <a
+            href="index.html"
+            class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >Nosotros</a
+          >
+          <a
+            href="servicios.html"
+            class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >Servicios</a
+          >
+          <a
+            href="reseñas-contacto.html"
+            class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >Contacto</a
+          >
+        </nav>
+
+        <!-- Botón de Acción Header (Escritorio lg+) y Botón Hamburguesa (Móviles y Tablets) -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a
+            href="reseñas-contacto.html"
+            class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-opacity-90 transition-all whitespace-nowrap"
+          >
+            Agenda tu limpieza
+          </a>
+
+          <!-- Botón Hamburguesa (Visible en móviles y tablets hasta 1023px) -->
+          <button
+            id="menu-btn"
+            aria-label="Abrir menú de navegación"
+            class="lg:hidden p-2 rounded-xl text-sanitex-navy hover:bg-gray-100 focus:outline-none"
+          >
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú Desplegable Móvil / Tablet (Hasta 1023px) -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 pt-4 pb-6 shadow-xl transition-all"
+      >
+        <nav class="flex flex-col space-y-3 max-w-md mx-auto">
+          <a
+            href="index.html"
+            class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >Nosotros</a
+          >
+          <a
+            href="servicios.html"
+            class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >Servicios</a
+          >
+          <a
+            href="reseñas-contacto.html"
+            class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >Contacto</a
+          >
+
+          <div class="pt-3">
+            <a
+              href="reseñas-contacto.html"
+              class="w-full flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md"
+            >
+              Agenda tu limpieza
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="px-6 py-12">
+        <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
+          <article class="rounded-3xl bg-sanitex-navy p-6 text-white md:p-8">
+            <h2 class="font-bold text-2xl">Agenda tu limpieza</h2>
+            <p class="mt-4">
+              Escribenos y cuentanos que espacio necesitas limpiar. Te
+              responderemos para coordinar la visita
+            </p>
+
+            <div class="mt-8 space-y-4">
+              <div class="flex items-center gap-3">
+                <span aria-hidden="true" class="shrink-0">☎</span>
+                <p>Telefono / WhatsApp: 3000000000</p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span aria-hidden="true">✉</span>
+                <p>Correo electronico: example.sanitex@gmail.com</p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span aria-hidden="true">⌖</span>
+                <p>Servicio a domicilio en Medellin, Colombia</p>
+              </div>
+            </div>
+          </article>
+          <article
+            class="rounded-3xl bg-sanitex-sky p-6 text-sanitex-navy md:p-8"
+          >
+            <h2 class="font-bold text-2xl">Horarios de atención</h2>
+
+            <dl class="mt-6">
+              <div class="flex justify-between border-b py-3">
+                <dt class="font-semibold">Lunes a viernes</dt>
+                <dd>7:00 AM - 8:00 PM</dd>
+              </div>
+
+              <div class="flex justify-between border-b py-3">
+                <dt class="font-semibold">Sábados</dt>
+                <dd>8:00 AM - 5:00 PM</dd>
+              </div>
+
+              <div class="flex justify-between py-3">
+                <dt class="font-semibold">Domingos y festivos</dt>
+                <dd>10:00 AM - 4:00 PM</dd>
+              </div>
+            </dl>
+
+            <p class="mt-4">Consulta con Sanitex la disponibilidad actual.</p>
+          </article>
+        </div>
+      </section>
+      <section class="bg-sanitex-aqua px-6 py-12">
+        <div class="mx-auto max-w-6xl">
+          <p
+            class="mb-3 inline-block rounded-full bg-white px-4 py-2 text-sm font-bold tracking-widest text-sanitex-navy"
+          >
+            RESEÑAS
+          </p>
+          <h2 class="text-3xl font-bold text-sanitex-navy md:text-5xl">
+            Lo que dicen nuestros clientes
+          </h2>
+          <p class="mt-5">Opiniones reales de nuestros clientes:</p>
+          <div
+            class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <article class="rounded-3xl bg-white p-6">
+              <p class="text-sanitex-ocean">★★★★★</p>
+              <blockquote class="mt-4">
+                "Hasta el dia de hoy no habia encontrado una empresa que
+                cumpliera completamente todas mis expectativas, y
+                definitivamente logre encontrarla. 100% recomendados"
+              </blockquote>
+              <p class="mt-6 font-bold text-sanitex-navy">
+                Rocio Ospina Villegas
+              </p>
+              <p class="text-sm text-sanitex-navy">Trinidad, Medellin</p>
+            </article>
+            <article class="bg-white rounded-4xl p-6">
+              <p class="text-sanitex-ocean">★★★★★</p>
+              <blockquote class="mt-4">
+                "Muy feliz con el servicio, pude disfrutar de mi unico dia libre
+                sin tener que perderlo limpiando todo"
+              </blockquote>
+              <p class="mt-6 font-bold text-sanitex-navy">Angelo Nakamoto</p>
+              <p class="text-sm text-sanitex-navy">
+                San Anotonio de Prado, Medellin
+              </p>
+            </article>
+            <article class="bg-white rounded-4xl p-6">
+              <p class="text-sanitex-ocean">★★★★★</p>
+              <blockquote class="mt-4">
+                "Demasiado intuitivo y sencillo la parte de la reserva, dejaron
+                impecable mi cocina y la persona fue muy amable"
+              </blockquote>
+              <p class="mt-6 font-bold text-sanitex-navy">Sebastian Garcia</p>
+              <p class="text-sm text-sanitex-navy">Campo Amor, Medellin</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <a
+      href="https://wa.me/5730000000000"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp, se abre en una nueva pestaña"
+      class="fixed bottom-4 right-3 z-50 grid size-15 place-items-center rounded-full bg-[#25d366] text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sanitex-navy"
+    >
+      <svg
+        aria-hidden="true"
+        class="size-7.5"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7a11.4 11.4 0 0 1-4.6-4c-.4-.5-1.1-1.6-1.1-3s.7-2.1 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4-.1.6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"
+        />
+      </svg>
+    </a>
+    <footer
+      class="border-t border-gray-500 bg-white font-['DM_Sans',sans-serif] text-sanitex-navy"
+    >
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-3 py-6 pl-4 pr-24 md:flex-row md:items-center md:justify-between md:pl-6"
+      >
+        <a
+          href="index.html"
+          class="inline-flex w-fit items-center gap-2 font-['Montserrat',sans-serif] font-bold"
+        >
+          <img
+            src="img/sanitex-logotipo.jpg"
+            alt="Logotipo de Sanitex"
+            width="64"
+            height="44"
+            class="h-11 w-16 object-contain"
+          />
+          Sanitex S.A.S.
+        </a>
+
+        <p class="text-sm">
+          Limpieza a domicilio en Medellín, Colombia · © 2026
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script de navegación móvil enlazado desde archivo externo -->
+    <script src="js/main.js"></script>
+    
+  </body>
 </html>
