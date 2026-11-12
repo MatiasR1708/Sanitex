@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanitex | Servicios de limpieza a domicilio en Medellín</title>
+<meta name="description" content="Sanitex ofrece servicios de limpieza general y de apartamentos amoblados a domicilio en Medellín, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#1b4965; --bright:#62b6cb; --clear:#5fa8d3; --aqua:#bee9e8; --sky:#cae9ff;
+    --white:#ffffff; --ink:#102a3a; --muted:#3f5f73;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+  h1,h2,h3,.brand,.eyebrow{font-family:"Montserrat",system-ui,sans-serif;color:var(--deep)}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .container{width:min(1120px,92%);margin-inline:auto}
+  .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);background:var(--aqua);display:inline-block;padding:.35rem .8rem;border-radius:999px;margin-bottom:1rem}
+  section{padding:5rem 0}
+  .section-head{max-width:640px;margin-bottom:2.5rem}
+  .section-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.2;margin-bottom:.75rem}
+  .section-head p{color:var(--muted)}
+  .placeholder{display:inline-block;font-size:.75rem;font-weight:600;color:var(--deep);background:#fff6d6;border:1px dashed #c9a227;border-radius:6px;padding:.1rem .45rem;margin-left:.35rem;vertical-align:middle}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;text-decoration:none;padding:.85rem 1.4rem;border-radius:999px;transition:transform .15s ease, background .15s ease;border:2px solid transparent}
+  .btn:focus-visible{outline:3px solid var(--clear);outline-offset:3px}
+  .btn-primary{background:var(--deep);color:var(--white)}
+  .btn-primary:hover{background:#143a51;transform:translateY(-1px)}
+  .btn-secondary{background:var(--white);color:var(--deep);border-color:var(--deep)}
+  .btn-secondary:hover{background:var(--sky)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--sky)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+  .brand{display:flex;align-items:center;gap:.4rem;font-weight:800;font-size:1.35rem;text-decoration:none}
+  .brand img{width:64px;height:44px;object-fit:cover}
+  .nav ul{display:flex;gap:1.5rem;list-style:none}
+  .nav ul a{text-decoration:none;font-weight:500;color:var(--deep)}
+  .nav ul a:hover{color:var(--clear)}
+  .nav .btn{padding:.6rem 1.1rem;font-size:.92rem}
+  @media (max-width:860px){.nav ul{display:none}}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--sky) 0%,var(--white) 100%);padding:4rem 0 5rem}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.1;font-weight:800;margin-bottom:1.2rem}
+  .hero h1 span{color:var(--clear)}
+  .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:520px;margin-bottom:2rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem}
+  .hero-media{position:relative}
+  .hero-media img.photo{border-radius:28px;aspect-ratio:4/3.4;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(27,73,101,.45)}
+  .badge{position:absolute;left:-1.25rem;bottom:1.5rem;background:var(--white);border-radius:16px;padding:.8rem 1rem;display:flex;align-items:center;gap:.7rem;box-shadow:0 12px 30px -12px rgba(27,73,101,.35)}
+  .badge img{width:56px;height:40px;object-fit:cover}
+  .badge strong{display:block;font-family:Montserrat,sans-serif;color:var(--deep);font-size:.95rem}
+  .badge small{color:var(--muted)}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.badge{left:1rem}}
+
+  /* Definición */
+  .definition{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;background:var(--aqua);border-radius:28px;padding:3rem}
+  .definition img{width:220px;height:auto;background:var(--white);border-radius:22px;padding:.5rem}
+  .definition h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:1rem}
+  .definition p{color:var(--ink);font-size:1.08rem}
+  @media (max-width:720px){.definition{grid-template-columns:1fr;padding:2rem;text-align:center}.definition img{margin-inline:auto;width:180px}}
+
+  /* Servicios */
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+  .card{background:var(--sky);border-radius:var(--radius);padding:2rem;display:flex;flex-direction:column;gap:1rem}
+  .icon{width:52px;height:52px;border-radius:14px;background:var(--white);display:grid;place-items:center;color:var(--clear)}
+  .card h3{font-size:1.3rem}
+  .card p{color:var(--muted)}
+  .card ul{list-style:none;display:grid;gap:.45rem}
+  .card li{display:flex;gap:.55rem;align-items:flex-start}
+  .card li svg{flex:none;margin-top:.3rem;color:var(--deep)}
+  .card .btn{margin-top:auto;align-self:flex-start}
+
+  /* Antes y después */
+  .ba{background:linear-gradient(180deg,var(--white),var(--sky))}
+  .compare{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/10;max-width:960px;margin-inline:auto;box-shadow:0 30px 60px -30px rgba(27,73,101,.45);user-select:none}
+  .compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .compare .after-wrap{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+  .compare .divider{position:absolute;top:0;bottom:0;left:50%;width:4px;background:var(--white);transform:translateX(-50%);pointer-events:none}
+  .compare .handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--white);display:grid;place-items:center;color:var(--deep);box-shadow:0 6px 18px rgba(0,0,0,.25);pointer-events:none}
+  .compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+  .compare input:focus-visible ~ .handle{outline:3px solid var(--clear);outline-offset:3px}
+  .tag{position:absolute;top:1rem;font-family:Montserrat,sans-serif;font-weight:700;font-size:.85rem;padding:.35rem .8rem;border-radius:999px;pointer-events:none}
+  .tag.before{left:1rem;background:var(--white);color:var(--deep)}
+  .tag.after{right:1rem;background:var(--deep);color:var(--white)}
+  .ba-note{text-align:center;color:var(--muted);margin-top:1rem;font-size:.92rem}
+
+  /* Objetivo, misión, visión */
+  .mvo{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+  .mvo article{border:2px solid var(--sky);border-radius:var(--radius);padding:2rem;background:var(--white)}
+  .mvo article:nth-child(2){background:var(--deep);border-color:var(--deep)}
+  .mvo article:nth-child(2) h3,.mvo article:nth-child(2) p{color:var(--white)}
+  .mvo article:nth-child(2) .icon{background:rgba(255,255,255,.14);color:var(--aqua)}
+  .mvo h3{font-size:1.25rem;margin:1rem 0 .6rem}
+  .mvo .icon{background:var(--aqua);color:var(--deep)}
+  .mvo p{color:var(--muted)}
+
+  /* Reseñas */
+  .reviews{background:var(--aqua)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+  .review{background:var(--white);border-radius:var(--radius);padding:1.75rem;display:flex;flex-direction:column;gap:1rem}
+  .stars{display:flex;gap:.15rem;color:var(--clear)}
+  .review blockquote{color:var(--ink)}
+  .review footer{display:flex;align-items:center;gap:.7rem}
+  .avatar{width:42px;height:42px;border-radius:50%;background:var(--sky);color:var(--deep);display:grid;place-items:center;font-family:Montserrat,sans-serif;font-weight:700}
+  .review footer strong{display:block;color:var(--deep)}
+  .review footer small{color:var(--muted)}
+
+  /* Contacto y horarios */
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+  .panel{border-radius:24px;padding:2.25rem}
+  .panel.dark{background:var(--deep);color:var(--white)}
+  .panel.dark h2,.panel.dark h3{color:var(--white)}
+  .panel.dark p{color:#d7ecf5}
+  .panel.light{background:var(--sky)}
+  .panel h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.75rem}
+  .contact-list{list-style:none;display:grid;gap:1rem;margin:1.75rem 0}
+  .contact-list li{display:flex;gap:.9rem;align-items:center}
+  .contact-list .icon{background:rgba(255,255,255,.12);color:var(--aqua);width:44px;height:44px}
+  .btn-wa{background:#ffffff;color:var(--deep)}
+  .btn-wa:hover{background:var(--aqua)}
+  .hours{width:100%;border-collapse:collapse;margin-top:1rem}
+  .hours th,.hours td{text-align:left;padding:.85rem 0;border-bottom:1px solid rgba(27,73,101,.15)}
+  .hours th{font-weight:500;color:var(--deep)}
+  .hours td{text-align:right;color:var(--muted)}
+
+  /* Footer */
+  .site-footer{background:var(--white);border-top:1px solid var(--sky);padding:2rem 0}
+  .site-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;color:var(--muted);font-size:.92rem}
+
+  /* WhatsApp flotante */
+  .wa-float{position:fixed;right:1.25rem;bottom:1.25rem;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);transition:transform .15s}
+  .wa-float:hover{transform:scale(1.06)}
+  .wa-float:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container nav" aria-label="Principal">
+    <a href="#inicio" class="brand"><img src="./img/logo.png" alt="" width="64" height="44">Sanitex</a>
+    <ul>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#resultados">Antes y después</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contacto">Agenda tu limpieza</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Inicio -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Limpieza a domicilio · Medellín</span>
+        <h1>Tu hogar limpio, <span>sin complicaciones</span>.</h1>
+        <p class="lead">En Sanitex vamos hasta tu casa o apartamento en Medellín para que tengas un espacio limpio, ordenado y agradable, mientras tú dedicas tu tiempo a lo que más te importa.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacto">Escríbenos por WhatsApp</a>
+          <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img class="photo" src="./img/hero.png" alt="Profesional de limpieza de Sanitex organizando una cocina iluminada en Medellín">
+        <div class="badge">
+          <img src="./img/logo.png" alt="" width="56" height="40">
+          <div><strong>Sanitex</strong><small>Servicio a domicilio en Medellín</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Definición -->
+  <section id="nosotros" aria-labelledby="def-title">
+    <div class="container">
+      <div class="definition">
+        <img src="./img/logo.png" alt="Logotipo de Sanitex: una letra S con una casa y un destello" width="220" height="146">
+        <div>
+          <span class="eyebrow" style="background:#fff">¿Quiénes somos?</span>
+          <h2 id="def-title">Sanitex: limpieza confiable para tu hogar</h2>
+          <p>Sanitex es una empresa de servicios de limpieza a domicilio en Medellín, Colombia. Cuidamos tu espacio con atención, respeto y dedicación, para que llegar a casa vuelva a ser un momento de tranquilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" aria-labelledby="serv-title" style="padding-top:1rem">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Servicios</span>
+        <h2 id="serv-title">Elige el servicio que necesitas</h2>
+        <p>Nos adaptamos al tipo de espacio que tienes. Cuéntanos qué necesitas y te ayudamos a coordinar la visita.</p>
+      </div>
+      <div class="services-grid">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
+          </div>
+          <h3>Limpieza general</h3>
+          <p>Limpieza completa de tu casa o apartamento para mantener cada espacio impecable.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Habitaciones y zonas sociales</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cocina y baños</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pisos y superficies</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Solicitar</a>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2z"/><path d="M5 18v2M19 18v2"/></svg>
+          </div>
+          <h3>Amoblados</h3>
+          <p>Limpieza de apartamentos amoblados, ideal para preparar el espacio antes o después de cada estadía.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Listos para recibir huéspedes</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cuidado de muebles y enseres</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Espacios ordenados y frescos</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Solicitar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Antes y después -->
+  <section class="ba" id="resultados" aria-labelledby="ba-title">
+    <div class="container">
+      <div class="section-head" style="margin-inline:auto;text-align:center">
+        <span class="eyebrow">Resultados</span>
+        <h2 id="ba-title">Antes y después</h2>
+        <p>Desliza para ver la diferencia que hace una limpieza con dedicación.</p>
+      </div>
+      <div class="compare" id="compare">
+        <img src="./img/antes.png" alt="Sala desordenada y con polvo antes de la limpieza">
+        <div class="after-wrap" id="afterWrap">
+          <img src="./img/despues.png" alt="La misma sala limpia y ordenada después de la limpieza de Sanitex">
+        </div>
+        <span class="tag before">Antes</span>
+        <span class="tag after">Después</span>
+        <div class="divider" id="divider"></div>
+        <input type="range" min="0" max="100" value="50" id="slider" aria-label="Comparar antes y después">
+        <div class="handle" id="handle" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+      <p class="ba-note">Imágenes de referencia. Reemplázalas por fotos reales de tus trabajos.</p>
+    </div>
+  </section>
+
+  <!-- Objetivo, misión, visión -->
+  <section aria-labelledby="mvo-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nuestro propósito</span>
+        <h2 id="mvo-title">Objetivo, misión y visión</h2>
+      </div>
+      <div class="mvo">
+        <article>
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
+          <h3>Objetivo</h3>
+          <p>Brindar servicios de limpieza a domicilio en Medellín que les devuelvan a nuestros clientes tiempo, comodidad y tranquilidad en su hogar.</p>
+        </article>
+        <article>
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Misión</h3>
+          <p>Cuidar cada hogar con un servicio de limpieza responsable, cercano y respetuoso, construyendo relaciones de confianza con cada cliente.</p>
+        </article>
+        <article>
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Visión</h3>
+          <p>Ser una empresa de limpieza a domicilio reconocida y recomendada en Medellín por la calidad y la calidez de su servicio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section class="reviews" id="resenas" aria-labelledby="rev-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="background:#fff">Reseñas</span>
+        <h2 id="rev-title">Lo que dicen nuestros clientes <span class="placeholder">Ejemplo</span></h2>
+        <p>Espacio para mostrar opiniones reales de tus clientes.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>“Reseña de ejemplo: aquí irá el comentario de un cliente sobre su experiencia con Sanitex.”</blockquote>
+          <footer><span class="avatar" aria-hidden="true">C</span><div><strong>Nombre del cliente</strong><small>Barrio, Medellín</small></div></footer>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>“Reseña de ejemplo: aquí irá el comentario de un cliente sobre el servicio de amoblados.”</blockquote>
+          <footer><span class="avatar" aria-hidden="true">C</span><div><strong>Nombre del cliente</strong><small>Barrio, Medellín</small></div></footer>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>“Reseña de ejemplo: aquí irá el comentario de un cliente sobre la limpieza general.”</blockquote>
+          <footer><span class="avatar" aria-hidden="true">C</span><div><strong>Nombre del cliente</strong><small>Barrio, Medellín</small></div></footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto y horarios -->
+  <section id="contacto" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+      <div class="panel dark">
+        <h2 id="contact-title">Agenda tu limpieza</h2>
+        <p>Escríbenos y cuéntanos qué espacio necesitas limpiar. Te responderemos para coordinar la visita.</p>
+        <ul class="contact-list">
+          <li><span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span>Teléfono / WhatsApp <span class="placeholder">Por definir</span></span></li>
+          <li><span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span>Correo electrónico <span class="placeholder">Por definir</span></span></li>
+          <li><span class="icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Servicio a domicilio en Medellín, Colombia</span></li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/57XXXXXXXXXX" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7a11.4 11.4 0 0 1-4.6-4c-.4-.5-1.1-1.6-1.1-3s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+      <div class="panel light">
+        <h3 style="font-size:1.5rem">Horarios de atención <span class="placeholder">Por definir</span></h3>
+        <table class="hours">
+          <caption class="sr-only">Horarios de atención de Sanitex</caption>
+          <tbody>
+            <tr><th scope="row">Lunes a viernes</th><td>— : — a — : —</td></tr>
+            <tr><th scope="row">Sábados</th><td>— : — a — : —</td></tr>
+            <tr><th scope="row">Domingos y festivos</th><td>— : — a — : —</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1.25rem;color:var(--muted)">Completa estos horarios con la disponibilidad real de Sanitex.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="#inicio" class="brand" style="font-size:1.1rem"><img src="./img/logo.png" alt="" width="64" height="44">Sanitex S.A.S.</a>
+    <span>Limpieza a domicilio en Medellín, Colombia · © 2026</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/57XXXXXXXXXX" target="_blank" rel="noopener" aria-label="Escribir a Sanitex por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7a11.4 11.4 0 0 1-4.6-4c-.4-.5-1.1-1.6-1.1-3s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+  const slider = document.getElementById('slider');
+  const afterWrap = document.getElementById('afterWrap');
+  const divider = document.getElementById('divider');
+  const handle = document.getElementById('handle');
+  slider.addEventListener('input', () => {
+    const v = slider.value;
+    afterWrap.style.clipPath = `inset(0 0 0 ${v}%)`;
+    divider.style.left = v + '%';
+    handle.style.left = v + '%';
+  });
+</script>
+</body>
+</html>
