@@ -30,39 +30,59 @@
 
                 <!-- Menú de navegación principal (Solo visible en pantallas anchas lg: 1024px+) -->
                 <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
-                    <a href="#nosotros" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">Nosotros</a>
-                    <a href="servicios.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">Servicios</a>
-                    <a href="reseñas-contacto.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">Contacto</a>
+
+                    <a href="#nosotros" aria-current="page" class="text-sm font-bold text-sanitex-blue transition-colors whitespace-nowrap">
+                        Nosotros</a>
+                    <a href="servicios.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
+                        Servicios</a>
+                    <a href="tarifas.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
+                        Tarifas</a>
+                    <a href="reseñas-contacto.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
+                        Contacto</a>
+
                 </nav>
 
                 <!-- Botón de Acción Header (Escritorio lg+) y Botón Hamburguesa (Móviles y Tablets) -->
                 <div class="flex items-center gap-4 shrink-0">
-                    <a href="reseñas-contacto.html" class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-opacity-90 transition-all whitespace-nowrap">
-                        Agenda tu limpieza
-                    </a>
+
+                    <a href="reseñas-contacto.html"
+                    class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-sanitex-blue transition-all whitespace-nowrap">
+                        Agenda tu limpieza</a>
 
                     <!-- Botón Hamburguesa (Visible en móviles y tablets hasta 1023px) -->
-                    <button id="menu-btn" aria-label="Abrir menú de navegación" class="lg:hidden p-2 rounded-xl text-sanitex-navy hover:bg-gray-100 focus:outline-none">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="menu-btn" type="button" aria-label="Abrir menú de navegación"
+                    aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-2 rounded-xl text-sanitex-navy hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sanitex-blue">
+
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+
                         </svg>
                     </button>
-                </div>
 
+                </div>
             </div>
 
             <!-- Menú Desplegable Móvil / Tablet (Hasta 1023px) -->
-            <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 pt-4 pb-6 shadow-xl transition-all">
+            <div id="mobile-menu"
+                class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 pt-4 pb-6 shadow-xl">
+
                 <nav class="flex flex-col space-y-3 max-w-md mx-auto">
-                    <a href="#nosotros" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">Nosotros</a>
-                    <a href="servicios.html" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">Servicios</a>
-                    <a href="reseñas-contacto.html" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">Contacto</a>
-                    
+
+                    <a href="#nosotros" aria-current="page" class="mobile-link text-base font-bold text-sanitex-blue py-2 border-b border-gray-50">
+                        Nosotros</a>
+                    <a href="servicios.html"class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
+                        Servicios</a>
+                    <a href="tarifas.html" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
+                        Tarifas</a>
+                    <a href="reseñas-contacto.html"class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
+                        Contacto</a>
+
                     <div class="pt-3">
-                        <a href="reseñas-contacto.html" class="w-full flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md">
-                            Agenda tu limpieza
-                        </a>
+                        <a href="reseñas-contacto.html"class="w-full flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md">
+                            Agenda tu limpieza</a>
                     </div>
+
                 </nav>
             </div>
         </header>
@@ -116,163 +136,164 @@
 
             </section>
         </main>
-    </div>
 
-    <!-- Sección ¿Quiénes somos? / Nosotros -->
-    <section id="nosotros" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div class="bg-sanitex-aqua/30 rounded-3xl p-6 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-sanitex-aqua/50">
-            
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-gray-100 w-full max-w-sm flex flex-col items-center justify-center text-center">
-                    <img src="img/sanitex-logotipo.jpg" alt="Logotipo de Sanitex" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover shadow-md mb-4">
-                    <span class="font-['Montserrat'] font-bold text-lg text-sanitex-navy">Sanitex S.A.S.</span>
+        <!-- Sección ¿Quiénes somos? / Nosotros -->
+        <section id="nosotros" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div class="bg-sanitex-aqua/30 rounded-3xl p-6 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-sanitex-aqua/50">
+                
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-gray-100 w-full max-w-sm flex flex-col items-center justify-center text-center">
+                        <img src="img/sanitex-logotipo.jpg" alt="Logotipo de Sanitex" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover shadow-md mb-4">
+                        <span class="font-['Montserrat'] font-bold text-lg text-sanitex-navy">Sanitex S.A.S.</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="lg:col-span-7 flex flex-col items-start space-y-4 text-left">
-                <span class="inline-block px-3.5 py-1.5 rounded-full bg-white text-sanitex-navy font-semibold text-xs tracking-wider uppercase shadow-sm">
-                    ¿Quiénes somos?
-                </span>
+                <div class="lg:col-span-7 flex flex-col items-start space-y-4 text-left">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-white text-sanitex-navy font-semibold text-xs tracking-wider uppercase shadow-sm">
+                        ¿Quiénes somos?
+                    </span>
 
-                <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl lg:text-4xl text-sanitex-navy">
-                    Sanitex: limpieza confiable para tu hogar
-                </h2>
+                    <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl lg:text-4xl text-sanitex-navy">
+                        Sanitex: limpieza confiable para tu hogar
+                    </h2>
 
-                <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-                    Sanitex es una empresa de servicios de limpieza a domicilio en Medellín, Colombia. Cuidamos tu espacio con atención, respeto y dedicación, para que llegar a casa vuelva a ser un momento de tranquilidad.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Objetivo, misión y visión -->
-    <section id="proposito" class="bg-white">
-
-        <div class="max-w-7xl mx-auto ">
-
-            <!-- Encabezado de la sección -->
-            <div>
-
-                <span class="inline-block bg-sanitex-aqua text-sanitex-navy
-                    font-bold text-sm tracking-widest uppercase
-                    px-4 py-2 rounded-full mb-10 mt-10">
-                    Nuestro propósito
-                </span>
-
-                <h2 class="text-sanitex-navy text-3xl md:text-4xl
-                    font-bold font-[Montserrat] mb-10">
-                    Objetivo, misión y visión
-                </h2>
-
-            </div>
-
-            <!-- Contenedor de tarjetas -->
-            <div class="flex flex-row gap-6">
-
-                <!-- Tarjeta Objetivo -->
-                <article class="border-2 border-sanitex-sky rounded-3xl
-                    p-8 md:p-10 bg-white p-20 mb-20">
-
-                    <div class="w-16 h-16 bg-sanitex-aqua rounded-2xl
-                        flex items-center justify-center mb-6">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-8 h-8 text-sanitex-navy"
-                            fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="1.8">
-                            <circle cx="12" cy="12" r="9"/>
-                            <circle cx="12" cy="12" r="5"/>
-                            <circle cx="12" cy="12" r="1.5"/>
-                        </svg>
-
-                    </div>
-
-                    <h3 class="text-sanitex-navy text-2xl
-                        font-bold mb-4 font-[Montserrat] mt-4">
-                        Objetivo
-                    </h3>
-
-                    <p class="text-sanitex-navy text-lg leading-relaxed">
-                        Brindar servicios de limpieza a domicilio en
-                        Medellín que les devuelvan a nuestros clientes
-                        tiempo, comodidad y tranquilidad en su hogar.
+                    <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        Sanitex es una empresa de servicios de limpieza a domicilio en Medellín, Colombia. Cuidamos tu espacio con atención, respeto y dedicación, para que llegar a casa vuelva a ser un momento de tranquilidad.
                     </p>
+                </div>
 
-                </article>
+            </div>
+        </section>
 
-                <!-- Tarjeta Misión -->
-                <article class="bg-sanitex-navy rounded-3xl
-                    p-8 md:p-10 text-white p-20 mb-20">
 
-                    <div class="w-16 h-16 bg-white/15 rounded-2xl
-                        flex items-center justify-center mb-6">
+        <!-- Objetivo, misión y visión -->
+        <section id="proposito" class="bg-white">
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-8 h-8 text-sanitex-aqua"
-                            fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
-                            <path stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="m9 12 2 2 4-4"/>
-                        </svg>
+            <div class="max-w-7xl gap-10">
 
-                    </div>
+                <!-- Encabezado de la sección -->
+                <div>
 
-                    <h3 class="text-white text-2xl
-                        font-bold mb-4 font-[Montserrat] mt-4">
-                        Misión
-                    </h3>
+                    <span class="inline-block bg-sanitex-aqua text-sanitex-navy
+                        font-bold text-sm tracking-widest uppercase
+                        px-4 py-2 rounded-full mb-10 mt-10">
+                        Nuestro propósito
+                    </span>
 
-                    <p class="text-white text-lg leading-relaxed">
-                        Cuidar cada hogar con un servicio de limpieza
-                        responsable, cercano y respetuoso, construyendo
-                        relaciones de confianza con cada cliente.
-                    </p>
+                    <h2 class="text-sanitex-navy text-3xl md:text-4xl
+                        font-bold font-[Montserrat] mb-10">
+                        Objetivo, misión y visión
+                    </h2>
 
-                </article>
+                </div>
 
-                <!-- Tarjeta Visión -->
-                <article class="border-2 border-sanitex-sky rounded-3xl
-                    p-8 md:p-10 bg-white p-20 mb-20">
+                <!-- Contenedor de tarjetas -->
+                <div class="flex flex-col md:flex-row gap-6">
 
-                    <div class="w-16 h-16 bg-sanitex-aqua rounded-2xl
-                        flex items-center justify-center mb-6">
+                    <!-- Tarjeta Objetivo -->
+                    <article class="border-2 border-sanitex-sky rounded-3xl
+                        p-8 md:p-10 bg-white mb-20 mx-5">
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-8 h-8 text-sanitex-navy"
-                            fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
+                        <div class="w-16 h-16 bg-sanitex-aqua rounded-2xl
+                            flex items-center justify-center mb-6">
 
-                    </div>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 text-sanitex-navy"
+                                fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="9"/>
+                                <circle cx="12" cy="12" r="5"/>
+                                <circle cx="12" cy="12" r="1.5"/>
+                            </svg>
 
-                    <h3 class="text-sanitex-navy text-2xl
-                        font-bold mb-4 font-[Montserrat] mt-4">
-                        Visión
-                    </h3>
+                        </div>
 
-                    <p class="text-sanitex-navy text-lg leading-relaxed">
-                        Ser una empresa de limpieza a domicilio
-                        reconocida y recomendada en Medellín por la
-                        calidad y la calidez de su servicio.
-                    </p>
+                        <h3 class="text-sanitex-navy text-2xl
+                            font-bold mb-4 font-[Montserrat] mt-4">
+                            Objetivo
+                        </h3>
 
-                </article>
+                        <p class="text-sanitex-navy text-lg leading-relaxed">
+                            Brindar servicios de limpieza a domicilio en
+                            Medellín que les devuelvan a nuestros clientes
+                            tiempo, comodidad y tranquilidad en su hogar.
+                        </p>
+
+                    </article>
+
+                    <!-- Tarjeta Misión -->
+                    <article class="bg-sanitex-navy rounded-3xl
+                        p-8 md:p-10 text-white mb-20">
+
+                        <div class="w-16 h-16 bg-white/15 rounded-2xl
+                            flex items-center justify-center mb-6">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 text-sanitex-aqua"
+                                fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m9 12 2 2 4-4"/>
+                            </svg>
+
+                        </div>
+
+                        <h3 class="text-white text-2xl
+                            font-bold mb-4 font-[Montserrat] mt-4">
+                            Misión
+                        </h3>
+
+                        <p class="text-white text-lg leading-relaxed">
+                            Cuidar cada hogar con un servicio de limpieza
+                            responsable, cercano y respetuoso, construyendo
+                            relaciones de confianza con cada cliente.
+                        </p>
+
+                    </article>
+
+                    <!-- Tarjeta Visión -->
+                    <article class="border-2 border-sanitex-sky rounded-3xl
+                        p-8 md:p-10 bg-white mb-20">
+
+                        <div class="w-16 h-16 bg-sanitex-aqua rounded-2xl
+                            flex items-center justify-center mb-6">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 text-sanitex-navy"
+                                fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+
+                        </div>
+
+                        <h3 class="text-sanitex-navy text-2xl
+                            font-bold mb-4 font-[Montserrat] mt-4">
+                            Visión
+                        </h3>
+
+                        <p class="text-sanitex-navy text-lg leading-relaxed">
+                            Ser una empresa de limpieza a domicilio
+                            reconocida y recomendada en Medellín por la
+                            calidad y la calidez de su servicio.
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </div>
 
     <!-- Botón de WhatsApp -->
     <a href="https://wa.me/5730000000000" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp, se abre en una nueva pestaña"

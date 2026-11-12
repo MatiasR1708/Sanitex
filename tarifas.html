@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth overflow-x-hidden w-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Planes y tarifas | Sanitex</title>
+
+    <link rel="icon" type="image/jpeg" href="img/sanitex-logotipo.jpg">
+    <link rel="stylesheet" href="dist/output.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800 font-['DM_Sans'] overflow-x-hidden w-full max-w-full relative">
+
+    <!-- Wrapper con fondo degradado adaptable -->
+    <div class="bg-linear-to-b from-sanitex-sky/40 via-sanitex-sky/10 to-white">
+
+        <!-- Encabezado Responsive Optimizado -->
+        <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                
+                <!-- Logotipo y Nombre -->
+                <a href="#inicio" class="flex items-center gap-3 shrink-0">
+                    <img src="img/sanitex-logotipo.jpg" alt="Logotipo Sanitex" class="w-10 h-10 rounded-xl object-cover shadow-sm">
+                    <span class="font-['Montserrat'] font-bold text-xl text-sanitex-navy tracking-tight">
+                        Sanitex
+                    </span>
+                </a>
+
+                <!-- Menú de navegación principal (Solo visible en pantallas anchas lg: 1024px+) -->
+                <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+
+                    <a href="index.html#nosotros" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
+                        Nosotros</a>
+                    <a href="servicios.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
+                        Servicios</a>
+                    <a href="tarifas.html" aria-current="page" class="text-sm font-bold text-sanitex-blue transition-colors whitespace-nowrap">
+                        Tarifas</a>
+                    <a href="reseñas-contacto.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
+                        Contacto</a>
+
+                </nav>
+
+                <!-- Botón de Acción Header (Escritorio lg+) y Botón Hamburguesa (Móviles y Tablets) -->
+                <div class="flex items-center gap-4 shrink-0">
+
+                    <a href="reseñas-contacto.html"
+                    class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-sanitex-blue transition-all whitespace-nowrap">
+                        Agenda tu limpieza</a>
+
+                    <!-- Botón Hamburguesa (Visible en móviles y tablets hasta 1023px) -->
+                    <button id="menu-btn" type="button" aria-label="Abrir menú de navegación"
+                    aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-2 rounded-xl text-sanitex-navy hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sanitex-blue">
+
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Menú Desplegable Móvil / Tablet (Hasta 1023px) -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 pt-4 pb-6 shadow-xl">
+
+                <nav class="flex flex-col space-y-3 max-w-md mx-auto">
+
+                    <a href="index.html#nosotros" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
+                        Nosotros</a>
+                    <a href="servicios.html"class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
+                        Servicios</a>
+                    <a href="tarifas.html" aria-current="page" class="mobile-link text-base font-bold text-sanitex-blue py-2 border-b border-gray-50">
+                        Tarifas</a>
+                    <a href="reseñas-contacto.html"class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
+                        Contacto</a>
+
+                    <div class="pt-3">
+                        <a href="reseñas-contacto.html"class="w-full flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md">
+                            Agenda tu limpieza</a>
+                    </div>
+
+                </nav>
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <!-- Presentación -->
+            <section class="bg-linear-to-b from-sanitex-sky/50 via-sanitex-sky/15 to-white">
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
+
+                    <span class="inline-block px-4 py-2 rounded-full bg-sanitex-aqua text-sanitex-navy font-bold text-xs sm:text-sm tracking-widest uppercase mb-6">
+                        Planes y tarifas
+                    </span>
+
+                    <h1 class="font-['Montserrat'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-sanitex-navy leading-tight max-w-4xl mx-auto">
+                        Un espacio limpio, con un plan a tu medida.
+                    </h1>
+
+                    <p class="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                        Conoce nuestras opciones de limpieza a domicilio en Medellín y encuentra la alternativa que mejor se adapta a las características de tu hogar.
+                    </p>
+
+                    <a href="#planes"
+                    class="inline-flex flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md">
+                        Conocer los planes
+                    </a>
+
+                </div>
+            </section>
+
+
+            <!-- Información de precios -->
+            <section id="planes" class="py-16 lg:py-20">
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+
+                        <span class="inline-block px-4 py-2 rounded-full bg-sanitex-aqua/60 text-sanitex-navy font-bold text-xs tracking-widest uppercase mb-5">
+                            Servicios individuales
+                        </span>
+
+                        <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl lg:text-4xl text-sanitex-navy">
+                            Elige la jornada que necesitas
+                        </h2>
+
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Opciones de servicio según el tiempo que deseas dedicar al cuidado de tu espacio.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Tarjetas individuales -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+
+
+                        <!-- Plan Esencial -->
+                        <article class="flex flex-col border-2 border-sanitex-sky rounded-3xl p-7 sm:p-8 bg-white shadow-sm hover:shadow-lg transition-shadow">
+
+                            <div class="w-14 h-14 bg-sanitex-aqua rounded-2xl flex items-center justify-center mb-6">
+
+                                <svg class="w-7 h-7 text-sanitex-navy"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.8"
+                                    aria-hidden="true">
+
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 3v3m0 12v3M3 12h3m12 0h3M5.64 5.64l2.12 2.12m8.48 8.48 2.12 2.12m0-12.72-2.12 2.12m-8.48 8.48-2.12 2.12">
+                                    </path>
+
+                                </svg>
+                            </div>
+
+                            <h3 class="font-['Montserrat'] text-2xl font-bold text-sanitex-navy">
+                                Esencial
+                            </h3>
+
+                            <p class="mt-2 text-gray-600">
+                                Una jornada práctica para el mantenimiento general del hogar.
+                            </p>
+
+                            <div class="mt-6">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-sanitex-navy">
+                                    $129.900
+                                </span>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Por servicio · 4 horas
+                                </p>
+                            </div>
+
+                            <ul class="mt-7 space-y-3 text-sm text-gray-700">
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Jornada de 4 horas.
+                                </li>
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Productos e implementos proporcionados por Sanitex.
+                                </li>
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Atención según las necesidades del espacio.
+                                </li>
+
+                            </ul>
+
+                            <a href="reseñas-contacto.html"
+                            class="mt-auto pt-8">
+
+                                <span class="block text-center w-full py-3 rounded-full border-2 border-sanitex-navy text-sanitex-navy font-semibold hover:bg-sanitex-navy hover:text-white transition-all">
+                                    Consultar disponibilidad
+                                </span>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Plan Completo -->
+                        <article class="flex flex-col border-2 border-sanitex-blue rounded-3xl p-7 sm:p-8 bg-sanitex-sky/20 shadow-md">
+
+                            <div class="w-14 h-14 bg-sanitex-navy rounded-2xl flex items-center justify-center mb-6">
+
+                                <svg class="w-7 h-7 text-sanitex-aqua"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.8"
+                                    aria-hidden="true">
+
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M4 19h16M5 16l3-8 4 4 3-7 4 11">
+                                    </path>
+
+                                </svg>
+                            </div>
+
+                            <span class="inline-block self-start px-3 py-1 rounded-full bg-sanitex-aqua text-sanitex-navy text-xs font-bold mb-4">
+                                Mayor duración
+                            </span>
+
+                            <h3 class="font-['Montserrat'] text-2xl font-bold text-sanitex-navy">
+                                Completo
+                            </h3>
+
+                            <p class="mt-2 text-gray-600">
+                                Una jornada más amplia para atender las necesidades de tu hogar.
+                            </p>
+
+                            <div class="mt-6">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-sanitex-navy">
+                                    $159.900
+                                </span>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Por servicio · 6 horas
+                                </p>
+                            </div>
+
+                            <ul class="mt-7 space-y-3 text-sm text-gray-700">
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Jornada de 6 horas.
+                                </li>
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Productos e implementos proporcionados por Sanitex.
+                                </li>
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Atención según las necesidades del espacio.
+                                </li>
+
+                            </ul>
+
+                            <a href="reseñas-contacto.html"
+                            class="mt-auto pt-8">
+
+                                <span class="block text-center w-full py-3 rounded-full bg-sanitex-navy text-white font-semibold hover:bg-sanitex-blue transition-all">
+                                    Consultar disponibilidad
+                                </span>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Plan Premium -->
+                        <article class="flex flex-col border-2 border-sanitex-sky rounded-3xl p-7 sm:p-8 bg-white shadow-sm hover:shadow-lg transition-shadow">
+
+                            <div class="w-14 h-14 bg-sanitex-aqua rounded-2xl flex items-center justify-center mb-6">
+
+                                <svg class="w-7 h-7 text-sanitex-navy"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.8"
+                                    aria-hidden="true">
+
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3z">
+                                    </path>
+
+                                </svg>
+                            </div>
+
+                            <h3 class="font-['Montserrat'] text-2xl font-bold text-sanitex-navy">
+                                Premium
+                            </h3>
+
+                            <p class="mt-2 text-gray-600">
+                                Una jornada extensa para hogares que requieren más tiempo de atención.
+                            </p>
+
+                            <div class="mt-6">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-sanitex-navy">
+                                    $189.900
+                                </span>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    Por servicio · 8 horas
+                                </p>
+                            </div>
+
+                            <ul class="mt-7 space-y-3 text-sm text-gray-700">
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Jornada de 8 horas.
+                                </li>
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Productos e implementos proporcionados por Sanitex.
+                                </li>
+
+                                <li class="flex gap-2">
+                                    <span class="text-sanitex-blue font-bold">✓</span>
+                                    Atención según las necesidades del espacio.
+                                </li>
+
+                            </ul>
+
+                            <a href="reseñas-contacto.html"
+                            class="mt-auto pt-8">
+
+                                <span class="block text-center w-full py-3 rounded-full border-2 border-sanitex-navy text-sanitex-navy font-semibold hover:bg-sanitex-navy hover:text-white transition-all">
+                                    Consultar disponibilidad
+                                </span>
+
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                    <p class="mt-8 text-sm text-gray-500 text-center">
+                        Los planes están sujetos a las características del inmueble y a la disponibilidad del servicio.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Planes mensuales -->
+            <section class="bg-sanitex-sky/20 py-16 lg:py-20">
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+
+                        <span class="inline-block px-4 py-2 rounded-full bg-white text-sanitex-navy font-bold text-xs tracking-widest uppercase mb-5">
+                            Servicio recurrente
+                        </span>
+
+                        <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl lg:text-4xl text-sanitex-navy">
+                            Planes mensuales
+                        </h2>
+
+                        <p class="mt-4 text-gray-600 leading-relaxed">
+                            Cuatro visitas al mes para mantener una atención periódica de tu hogar.
+                        </p>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+
+                        <!-- Mensual Esencial -->
+                        <article class="bg-white rounded-3xl p-7 sm:p-8 border border-sanitex-sky shadow-sm flex flex-col">
+
+                            <h3 class="font-['Montserrat'] text-xl font-bold text-sanitex-navy">
+                                Mensual Esencial
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-600">
+                                Para quienes prefieren una jornada semanal de mantenimiento.
+                            </p>
+
+                            <div class="mt-6">
+                                <span class="text-3xl font-extrabold text-sanitex-navy">
+                                    $479.900
+                                </span>
+                                <p class="text-sm text-gray-500">
+                                    Al mes · IVA incluido
+                                </p>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-sanitex-sky/30 rounded-2xl">
+                                <p class="font-semibold text-sanitex-navy">
+                                    4 visitas mensuales
+                                </p>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    4 horas por visita
+                                </p>
+                            </div>
+
+                            <ul class="mt-6 space-y-3 text-sm text-gray-700">
+                                <li>✓ Una visita por semana.</li>
+                                <li>✓ Productos e implementos incluidos.</li>
+                                <li>✓ Programación de las visitas.</li>
+                            </ul>
+
+                            <a href="reseñas-contacto.html"
+                            class="mt-auto pt-8">
+                                <span class="block text-center py-3 rounded-full border-2 border-sanitex-navy text-sanitex-navy font-semibold hover:bg-sanitex-navy hover:text-white transition-all">
+                                    Consultar disponibilidad
+                                </span>
+                            </a>
+
+                        </article>
+
+
+                        <!-- Mensual Completo -->
+                        <article class="bg-sanitex-navy rounded-3xl p-7 sm:p-8 shadow-lg flex flex-col text-white">
+
+                            <span class="inline-block self-start px-3 py-1 rounded-full bg-sanitex-aqua text-sanitex-navy text-xs font-bold mb-4">
+                                Recomendado
+                            </span>
+
+                            <h3 class="font-['Montserrat'] text-xl font-bold text-white">
+                                Mensual Completo
+                            </h3>
+
+                            <p class="mt-2 text-sm text-white/80">
+                                Una jornada semanal de mayor duración para tu hogar.
+                            </p>
+
+                            <div class="mt-6">
+                                <span class="text-3xl font-extrabold text-white">
+                                    $599.900
+                                </span>
+                                <p class="text-sm text-white/70">
+                                    Al mes · IVA incluido
+                                </p>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-white/10 rounded-2xl">
+                                <p class="font-semibold text-white">
+                                    4 visitas mensuales
+                                </p>
+                                <p class="text-sm text-white/80 mt-1">
+                                    6 horas por visita
+                                </p>
+                            </div>
+
+                            <ul class="mt-6 space-y-3 text-sm text-white/90">
+                                <li>✓ Una visita por semana.</li>
+                                <li>✓ Productos e implementos incluidos.</li>
+                                <li>✓ Programación de las visitas.</li>
+                            </ul>
+
+                            <a href="reseñas-contacto.html"
+                            class="mt-auto pt-8">
+                                <span class="block text-center py-3 rounded-full bg-white text-sanitex-navy font-semibold hover:bg-sanitex-aqua transition-all">
+                                    Consultar disponibilidad
+                                </span>
+                            </a>
+
+                        </article>
+
+
+                        <!-- Mensual Premium -->
+                        <article class="bg-white rounded-3xl p-7 sm:p-8 border border-sanitex-sky shadow-sm flex flex-col">
+
+                            <h3 class="font-['Montserrat'] text-xl font-bold text-sanitex-navy">
+                                Mensual Premium
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-600">
+                                Para hogares que requieren jornadas semanales más extensas.
+                            </p>
+
+                            <div class="mt-6">
+                                <span class="text-3xl font-extrabold text-sanitex-navy">
+                                    $719.900
+                                </span>
+                                <p class="text-sm text-gray-500">
+                                    Al mes · IVA incluido
+                                </p>
+                            </div>
+
+                            <div class="mt-6 p-4 bg-sanitex-sky/30 rounded-2xl">
+                                <p class="font-semibold text-sanitex-navy">
+                                    4 visitas mensuales
+                                </p>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    8 horas por visita
+                                </p>
+                            </div>
+
+                            <ul class="mt-6 space-y-3 text-sm text-gray-700">
+                                <li>✓ Una visita por semana.</li>
+                                <li>✓ Productos e implementos incluidos.</li>
+                                <li>✓ Programación de las visitas.</li>
+                            </ul>
+
+                            <a href="reseñas-contacto.html"
+                            class="mt-auto pt-8">
+                                <span class="block text-center py-3 rounded-full border-2 border-sanitex-navy text-sanitex-navy font-semibold hover:bg-sanitex-navy hover:text-white transition-all">
+                                    Consultar disponibilidad
+                                </span>
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                    <div class="mt-10 bg-white border border-sanitex-sky rounded-2xl p-5 sm:p-6">
+
+                        <h3 class="font-['Montserrat'] font-bold text-sanitex-navy text-lg">
+                            ¿Cómo funcionan los planes mensuales?
+                        </h3>
+
+                        <p class="mt-2 text-gray-600 leading-relaxed text-sm sm:text-base">
+                            Cada plan contempla cuatro visitas al mes. Las fechas se acuerdan previamente con el cliente. Si alguna visita se programa para domingo o festivo, se aplicará el ajuste correspondiente a esa visita.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Tarifas por día -->
+            <section class="py-16 lg:py-20">
+
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center mb-12">
+
+                        <span class="inline-block px-4 py-2 rounded-full bg-sanitex-aqua/60 text-sanitex-navy font-bold text-xs tracking-widest uppercase mb-5">
+                            Horarios y tarifas
+                        </span>
+
+                        <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl text-sanitex-navy">
+                            Atención según el día de la semana
+                        </h2>
+
+                        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                            Contamos con horarios de atención diferenciados. Las tarifas se ajustan según el día en que se realiza el servicio.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white border border-sanitex-sky rounded-3xl overflow-hidden shadow-sm">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
+
+                            <div class="p-6 sm:p-8 border-b sm:border-b-0 sm:border-r border-sanitex-sky">
+
+                                <h3 class="font-['Montserrat'] font-bold text-xl text-sanitex-navy mb-6">
+                                    Horarios ordinarios
+                                </h3>
+
+                                <div class="space-y-5">
+
+                                    <div class="flex justify-between gap-4 border-b border-gray-100 pb-4">
+                                        <span class="font-semibold text-gray-700">Lunes a viernes</span>
+                                        <span class="text-gray-600 text-right">7:00 a. m. – 8:00 p. m.</span>
+                                    </div>
+
+                                    <div class="flex justify-between gap-4">
+                                        <span class="font-semibold text-gray-700">Sábados</span>
+                                        <span class="text-gray-600 text-right">8:00 a. m. – 5:00 p. m.</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="mt-8 p-4 rounded-2xl bg-sanitex-sky/30">
+                                    <p class="text-sanitex-navy font-semibold">
+                                        Tarifa ordinaria
+                                    </p>
+                                    <p class="text-sm text-gray-600 mt-1">
+                                        Se aplica a los servicios realizados de lunes a sábado dentro del horario de atención.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="p-6 sm:p-8 bg-sanitex-sky/15">
+
+                                <h3 class="font-['Montserrat'] font-bold text-xl text-sanitex-navy mb-6">
+                                    Domingos y festivos
+                                </h3>
+
+                                <div class="flex justify-between gap-4 border-b border-sanitex-sky pb-4">
+                                    <span class="font-semibold text-gray-700">Horario</span>
+                                    <span class="text-gray-600 text-right">10:00 a. m. – 4:00 p. m.</span>
+                                </div>
+
+                                <div class="mt-6">
+                                    <span class="inline-block px-3 py-1 rounded-full bg-sanitex-aqua text-sanitex-navy text-xs font-bold">
+                                        Tarifa especial
+                                    </span>
+
+                                    <p class="text-3xl font-extrabold text-sanitex-navy mt-3">
+                                        +20 %
+                                    </p>
+
+                                    <p class="text-sm text-gray-600 mt-2">
+                                        Ajuste sobre el valor del servicio individual.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-6 p-5 rounded-2xl bg-sanitex-sky/20 border border-sanitex-sky">
+
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            <strong class="text-sanitex-navy">Ten en cuenta:</strong>
+                            el ajuste de domingos y festivos se aplica sobre el valor de cada visita. En los planes mensuales, se calcula únicamente sobre las visitas programadas en esos días.
+                        </p>
+
+                        <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                            Debido al horario de atención, las jornadas de ocho horas no están disponibles los domingos ni festivos.
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Información sobre el inmueble -->
+            <section class="bg-sanitex-sky/20 py-16 lg:py-20">
+
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="bg-white rounded-3xl p-7 sm:p-10 lg:p-12 border border-sanitex-sky">
+
+                        <div class="max-w-3xl">
+
+                            <span class="inline-block px-4 py-2 rounded-full bg-sanitex-aqua text-sanitex-navy font-bold text-xs tracking-widest uppercase mb-5">
+                                Información importante
+                            </span>
+
+                            <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl text-sanitex-navy">
+                                Un plan adecuado para cada espacio
+                            </h2>
+
+                            <p class="mt-5 text-gray-600 leading-relaxed">
+                                Los precios y la duración recomendada pueden variar según las características del inmueble, como su área, distribución, cantidad de habitaciones y baños, y condiciones generales.
+                            </p>
+
+                            <p class="mt-4 text-gray-600 leading-relaxed">
+                                Antes de confirmar el servicio, revisamos las necesidades del espacio para recomendar la jornada más adecuada y ofrecer una cotización clara.
+                            </p>
+
+                            <div class="mt-7 flex items-start gap-4 p-5 rounded-2xl bg-sanitex-sky/30">
+
+                                <div class="w-11 h-11 shrink-0 rounded-xl bg-sanitex-aqua flex items-center justify-center">
+
+                                    <svg class="w-6 h-6 text-sanitex-navy"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.8"
+                                        aria-hidden="true">
+
+                                        <path stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M5 13l4 4L19 7">
+                                        </path>
+
+                                    </svg>
+
+                                </div>
+
+                                <div>
+                                    <h3 class="font-['Montserrat'] font-bold text-sanitex-navy">
+                                        Productos e implementos incluidos
+                                    </h3>
+
+                                    <p class="text-sm text-gray-600 mt-1 leading-relaxed">
+                                        Sanitex proporciona los productos e implementos necesarios para la prestación del servicio.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <p class="text-xs text-gray-500 mt-5">
+                                Los valores publicados son precios finales con IVA incluido. Las condiciones del servicio se confirman antes de programar cada visita.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Plan empresarial -->
+            <section class="py-16 lg:py-20">
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="relative overflow-hidden rounded-3xl bg-sanitex-navy px-6 py-12 sm:px-10 lg:px-16 lg:py-16">
+
+                        <div class="absolute -top-24 -right-20 w-72 h-72 rounded-full bg-sanitex-blue/20 blur-3xl"
+                            aria-hidden="true">
+                        </div>
+
+                        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+                            <div class="lg:col-span-8">
+
+                                <span class="inline-block px-4 py-2 rounded-full bg-white/10 text-sanitex-aqua font-bold text-xs tracking-widest uppercase mb-6">
+                                    Soluciones para empresas
+                                </span>
+
+                                <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                                    Sanitex Empresas
+                                </h2>
+
+                                <p class="mt-5 text-white/80 leading-relaxed max-w-2xl">
+                                    Una alternativa para oficinas, locales comerciales y espacios empresariales que requieren servicios de limpieza de acuerdo con sus características y necesidades.
+                                </p>
+
+                                <ul class="mt-7 space-y-3 text-white/90 text-sm sm:text-base">
+
+                                    <li>✓ Evaluación de las características del espacio.</li>
+                                    <li>✓ Definición de la frecuencia y duración del servicio.</li>
+                                    <li>✓ Propuesta de atención según las necesidades del establecimiento.</li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="lg:col-span-4">
+
+                                <div class="bg-white rounded-3xl p-6 sm:p-8 text-center shadow-xl">
+
+                                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                                        Precio
+                                    </p>
+
+                                    <h3 class="font-['Montserrat'] text-2xl font-extrabold text-sanitex-navy mt-3">
+                                        Personalizado
+                                    </h3>
+
+                                    <p class="text-sm text-gray-600 mt-3 leading-relaxed">
+                                        Cotización después de una visita de evaluación.
+                                    </p>
+
+                                    <a href="reseñas-contacto.html"
+                                    class="inline-flex items-center justify-center w-full mt-7 px-5 py-3 rounded-full bg-sanitex-navy text-white font-semibold hover:bg-sanitex-blue transition-all">
+                                        Solicitar información
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Llamado a la acción final -->
+            <section class="bg-sanitex-sky/30 py-16">
+
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+
+                    <h2 class="font-['Montserrat'] font-bold text-2xl sm:text-3xl text-sanitex-navy">
+                        ¿Listo para darle a tu hogar la atención que necesita?
+                    </h2>
+
+                    <p class="mt-4 text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                        Escríbenos para conocer la disponibilidad y encontrar el plan adecuado para tu espacio.
+                    </p>
+
+                    <a href="reseñas-contacto.html" class="inline-flex items-center justify-center mt-8 px-7 py-3.5 rounded-full bg-sanitex-navy text-white font-semibold shadow-md hover:bg-sanitex-blue transition-all">
+                        Contactar a Sanitex
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/5730000000000" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp, se abre en una nueva pestaña"
+    class="fixed bottom-4 right-3 z-50 grid size-15 place-items-center
+            rounded-full bg-[#25d366] text-white shadow-lg
+            focus-visible:outline-2 focus-visible:outline-offset-4
+            focus-visible:outline-sanitex-navy">
+    <svg aria-hidden="true" class="size-7.5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7a11.4 11.4 0 0 1-4.6-4c-.4-.5-1.1-1.6-1.1-3s.7-2.1 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4-.1.6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/>
+    </svg>
+    </a>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 bg-white font-['DM_Sans'] text-sanitex-navy">
+
+        <div class="mx-auto flex max-w-6xl flex-col gap-3 py-6 pl-4 pr-24 md:flex-row md:items-center md:justify-between md:pl-6">
+
+            <a href="index.html" class="inline-flex w-fit items-center gap-2 font-['Montserrat'] font-bold">
+
+                <img src="img/sanitex-logotipo.jpg"
+                    alt=""
+                    width="64"
+                    height="44"
+                    class="h-11 w-16 object-contain">
+
+                Sanitex S.A.S.
+            </a>
+
+            <p class="text-sm">
+                Limpieza a domicilio en Medellín, Colombia · © 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Script de navegación móvil -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
