@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Sanitex</title>
   </head>
-  <body>
-
+  <body class="font-[DM_Sans] text-gray-800">
     <!-- Wrapper con fondo degradado adaptable -->
     <div class="bg-linear-to-b from-sanitex-sky/40 via-sanitex-sky/10 to-white">
-    
       <!-- Encabezado Responsive Optimizado -->
       <header
         class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
@@ -19,74 +23,142 @@
           class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
         >
           <!-- Logotipo y Nombre -->
-                <a href="#inicio" class="flex items-center gap-3 shrink-0">
-                    <img src="img/sanitex-logotipo.jpg" alt="Logotipo Sanitex" class="w-10 h-10 rounded-xl object-cover shadow-sm">
-                    <span class="font-['Montserrat'] font-bold text-xl text-sanitex-navy tracking-tight">
-                        Sanitex
-                    </span>
-                </a>
+          <a href="#inicio" class="flex items-center gap-3 shrink-0">
+            <img
+              src="img/sanitex-logotipo.jpg"
+              alt="Logotipo Sanitex"
+              class="w-10 h-10 rounded-xl object-cover shadow-sm"
+            />
+            <span
+              class="font-['Montserrat'] font-bold text-xl text-sanitex-navy tracking-tight"
+            >
+              Sanitex
+            </span>
+          </a>
 
           <!-- Menú de navegación principal (Solo visible en pantallas anchas lg: 1024px+) -->
-                  <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+            <a
+              href="index.html#nosotros"
+              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >
+              Nosotros</a
+            >
+            <a
+              href="servicios.html"
+              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >
+              Servicios</a
+            >
+            <a
+              href="tarifas.html"
+              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >
+              Tarifas</a
+            >
+            <a
+              href="#solicitar-limpieza"
+              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+            >
+              Solicitar limpieza</a
+            >
+            <a
+              href="reseñas-contacto.html"
+              aria-current="page"
+              class="text-sm font-bold text-sanitex-blue transition-colors whitespace-nowrap"
+            >
+              Contacto</a
+            >
+          </nav>
 
-                      <a href="index.html#nosotros" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
-                          Nosotros</a>
-                      <a href="servicios.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
-                          Servicios</a>
-                      <a href="tarifas.html" class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap">
-                          Tarifas</a>
-                      <a href="reseñas-contacto.html" aria-current="page" class="text-sm font-bold text-sanitex-blue transition-colors whitespace-nowrap">
-                          Contacto</a>
+          <!-- Botón de Acción Header (Escritorio lg+) y Botón Hamburguesa (Móviles y Tablets) -->
+          <div class="flex items-center gap-4 shrink-0">
+            <a
+              href="reseñas-contacto.html"
+              class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-sanitex-blue transition-all whitespace-nowrap"
+            >
+              Agenda tu limpieza</a
+            >
 
-                  </nav>
+            <!-- Botón Hamburguesa (Visible en móviles y tablets hasta 1023px) -->
+            <button
+              id="menu-btn"
+              type="button"
+              aria-label="Abrir menú de navegación"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              class="lg:hidden p-2 rounded-xl text-sanitex-navy hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sanitex-blue"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-                  <!-- Botón de Acción Header (Escritorio lg+) y Botón Hamburguesa (Móviles y Tablets) -->
-                  <div class="flex items-center gap-4 shrink-0">
+        <!-- Menú Desplegable Móvil / Tablet (Hasta 1023px) -->
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 pt-4 pb-6 shadow-xl"
+        >
+          <nav class="flex flex-col space-y-3 max-w-md mx-auto">
+            <a
+              href="index.html#nosotros"
+              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >
+              Nosotros</a
+            >
+            <a
+              href="servicios.html"
+              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >
+              Servicios</a
+            >
+            <a
+              href="tarifas.html"
+              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >
+              Tarifas</a
+            >
+            <a
+              href="#solicitar-limpieza"
+              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+            >
+              Solicitar limpieza</a
+            >
+            <a
+              href="reseñas-contacto.html"
+              aria-current="page"
+              class="mobile-link text-base font-bold text-sanitex-blue py-2 border-b border-gray-50"
+            >
+              Contacto</a
+            >
 
-                      <a href="reseñas-contacto.html"
-                      class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-sanitex-blue transition-all whitespace-nowrap">
-                          Agenda tu limpieza</a>
-
-                      <!-- Botón Hamburguesa (Visible en móviles y tablets hasta 1023px) -->
-                      <button id="menu-btn" type="button" aria-label="Abrir menú de navegación"
-                      aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden p-2 rounded-xl text-sanitex-navy hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sanitex-blue">
-
-                          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-
-                          </svg>
-                      </button>
-
-                  </div>
-              </div>
-
-              <!-- Menú Desplegable Móvil / Tablet (Hasta 1023px) -->
-              <div id="mobile-menu"
-                  class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 pt-4 pb-6 shadow-xl">
-
-                  <nav class="flex flex-col space-y-3 max-w-md mx-auto">
-
-                      <a href="index.html#nosotros" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
-                          Nosotros</a>
-                      <a href="servicios.html"class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
-                          Servicios</a>
-                      <a href="tarifas.html" class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50">
-                          Tarifas</a>
-                      <a href="reseñas-contacto.html" aria-current="page" class="mobile-link text-base font-bold text-sanitex-blue py-2 border-b border-gray-50">
-                          Contacto</a>
-
-                      <div class="pt-3">
-                          <a href="reseñas-contacto.html"class="w-full flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md">
-                              Agenda tu limpieza</a>
-                      </div>
-
-                  </nav>
-              </div>
+            <div class="pt-3">
+              <a
+                href="reseñas-contacto.html"
+                class="w-full flex items-center justify-center px-5 py-3 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md"
+              >
+                Agenda tu limpieza</a
+              >
+            </div>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <section class="px-6 py-12">
+        <section class="px-6 py-12 " >
           <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
             <article class="rounded-3xl bg-sanitex-navy p-6 text-white md:p-8">
               <h2 class="font-bold text-2xl">Agenda tu limpieza</h2>
@@ -138,6 +210,183 @@
             </article>
           </div>
         </section>
+        <section id="solicitar-limpieza" class="bg-sanitex-sky px-6 py-12 sm:py-16">
+          <div class="mx-auto max-w-3xl">
+            <div class="mb-8 text-center">
+              <p
+                class="mb-3 inline-block rounded-full bg-sanitex-aqua px-4 py-2 text-sm font-bold tracking-widest text-sanitex-navy"
+              >
+                SOLICITUD DE SERVICIO
+              </p>
+
+              <h2
+                class="font-['Montserrat'] text-3xl font-bold text-sanitex-navy md:text-4xl"
+              >
+                Cuéntanos qué necesitas
+              </h2>
+
+              <p class="mb-4 mt-4 font-['DM_Sans',sans-serif] text-gray-700 my-12">
+                Déjanos tus datos y los detalles del espacio que quieres
+                limpiar.
+              </p>
+            </div>
+
+            <form
+              id="formulario-limpieza"
+              class="font-['DM_Sans',sans-serif] space-y-5 rounded-3xl border border-sanitex-sky bg-white p-6 shadow-sm sm:p-8"
+              novalidate
+            >
+              <div>
+                <label
+                  for="nombre"
+                  class="mb-2 block font-semibold text-sanitex-navy"
+                >
+                  Nombre completo
+                </label>
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  autocomplete="name"
+                  minlength="3"
+                  maxlength="80"
+                  required
+                  class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sanitex-navy outline-none focus:border-sanitex-blue focus:ring-2 focus:ring-sanitex-blue/30"
+                  aria-describedby="error-nombre"
+                />
+                <p
+                  id="error-nombre"
+                  class="mt-1 hidden text-sm text-red-700"
+                  aria-live="polite"
+                ></p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="correo"
+                    class="mb-2 block font-semibold text-sanitex-navy"
+                  >
+                    Correo electrónico
+                  </label>
+                  <input
+                    id="correo"
+                    name="correo"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="120"
+                    required
+                    class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sanitex-navy outline-none focus:border-sanitex-blue focus:ring-2 focus:ring-sanitex-blue/30"
+                    aria-describedby="error-correo"
+                  />
+                  <p
+                    id="error-correo"
+                    class="mt-1 hidden text-sm text-red-700"
+                    aria-live="polite"
+                  ></p>
+                </div>
+
+                <div>
+                  <label
+                    for="telefono"
+                    class="mb-2 block font-semibold text-sanitex-navy"
+                  >
+                    Teléfono
+                  </label>
+                  <input
+                    id="telefono"
+                    name="telefono"
+                    type="tel"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    maxlength="20"
+                    placeholder="Ej. 3001234567"
+                    required
+                    class="w-full rounded-xl border border-gray-300 px-4 py-3 text-sanitex-navy outline-none focus:border-sanitex-blue focus:ring-2 focus:ring-sanitex-blue/30"
+                    aria-describedby="ayuda-telefono error-telefono"
+                  />
+                  <p id="ayuda-telefono" class="mt-1 text-sm text-gray-600">
+                    Escribe un número colombiano de 10 dígitos; puedes incluir
+                    +57.
+                  </p>
+                  <p
+                    id="error-telefono"
+                    class="mt-1 hidden text-sm text-red-700"
+                    aria-live="polite"
+                  ></p>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="tipo-servicio"
+                  class="mb-2 block font-semibold text-sanitex-navy"
+                >
+                  ¿Qué espacio necesitas limpiar?
+                </label>
+                <select
+                  id="tipo-servicio"
+                  name="tipoServicio"
+                  required
+                  class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sanitex-navy outline-none focus:border-sanitex-blue focus:ring-2 focus:ring-sanitex-blue/30"
+                  aria-describedby="error-tipo-servicio"
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="Servicio esencial">Servicio esencial</option>
+                  <option value="Servicio completo">Servicio completo</option>
+                  <option value="Servicio premium">Servicio premium</option>
+                  <option value="Mensual esencial">Mensual esencial</option>
+                  <option value="Mensual completo">Mensual completo</option>
+                  <option value="Mensual premium">Mensual premium</option>
+                </select>
+                <p
+                  id="error-tipo-servicio"
+                  class="mt-1 hidden text-sm text-red-700"
+                  aria-live="polite"
+                ></p>
+              </div>
+
+              <div>
+                <label
+                  for="detalles"
+                  class="mb-2 block font-semibold text-sanitex-navy"
+                >
+                  Cuéntanos un poco más
+                </label>
+                <textarea
+                  id="detalles"
+                  name="detalles"
+                  rows="4"
+                  minlength="10"
+                  maxlength="1000"
+                  required
+                  placeholder="Por ejemplo: tamaño aproximado y qué necesitas limpiar."
+                  class="w-full resize-y rounded-xl border border-gray-300 px-4 py-3 text-sanitex-navy outline-none focus:border-sanitex-blue focus:ring-2 focus:ring-sanitex-blue/30"
+                  aria-describedby="error-detalles"
+                ></textarea>
+                <p
+                  id="error-detalles"
+                  class="mt-1 hidden text-sm text-red-700"
+                  aria-live="polite"
+                ></p>
+              </div>
+
+              <div
+                id="estado-formulario"
+                class="hidden rounded-xl bg-sanitex-aqua/50 p-4 text-sanitex-navy"
+                role="status"
+                aria-live="polite"
+              ></div>
+
+              <button
+                type="submit"
+                class="inline-flex w-full items-center justify-center rounded-full bg-sanitex-navy px-6 py-3 font-semibold text-white transition hover:bg-sanitex-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sanitex-navy sm:w-auto"
+              >
+                Revisar solicitud
+              </button>
+            </form>
+          </div>
+        </section>
         <section class="bg-sanitex-aqua px-6 py-12">
           <div class="mx-auto max-w-6xl">
             <p
@@ -167,8 +416,8 @@
               <article class="bg-white rounded-4xl p-6">
                 <p class="text-sanitex-ocean">★★★★★</p>
                 <blockquote class="mt-4">
-                  "Muy feliz con el servicio, pude disfrutar de mi unico dia libre
-                  sin tener que perderlo limpiando todo"
+                  "Muy feliz con el servicio, pude disfrutar de mi unico dia
+                  libre sin tener que perderlo limpiando todo"
                 </blockquote>
                 <p class="mt-6 font-bold text-sanitex-navy">Angelo Nakamoto</p>
                 <p class="text-sm text-sanitex-navy">
@@ -178,8 +427,8 @@
               <article class="bg-white rounded-4xl p-6">
                 <p class="text-sanitex-ocean">★★★★★</p>
                 <blockquote class="mt-4">
-                  "Demasiado intuitivo y sencillo la parte de la reserva, dejaron
-                  impecable mi cocina y la persona fue muy amable"
+                  "Demasiado intuitivo y sencillo la parte de la reserva,
+                  dejaron impecable mi cocina y la persona fue muy amable"
                 </blockquote>
                 <p class="mt-6 font-bold text-sanitex-navy">Sebastian Garcia</p>
                 <p class="text-sm text-sanitex-navy">Campo Amor, Medellin</p>
@@ -236,6 +485,5 @@
 
     <!-- Script de navegación móvil enlazado desde archivo externo -->
     <script src="js/main.js"></script>
-    
   </body>
 </html>
