@@ -156,3 +156,34 @@ if (comparador && control) {
             });
         });
     }
+
+
+// Selector de tema con preferencia persistente entre páginas.
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+
+    const darkIcon = themeToggle.querySelector('.theme-icon-dark');
+    const lightIcon = themeToggle.querySelector('.theme-icon-light');
+    const label = themeToggle.querySelector('span');
+
+    const syncThemeControl = () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
+        if (label) label.textContent = isDark ? 'Modo claro' : 'Modo oscuro';
+        darkIcon?.classList.toggle('hidden', isDark);
+        lightIcon?.classList.toggle('hidden', !isDark);
+    };
+
+    syncThemeControl();
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try {
+            localStorage.setItem('sanitex-theme', isDark ? 'dark' : 'light');
+        } catch (error) {
+            // El cambio funciona durante esta visita aunque el almacenamiento esté bloqueado.
+        }
+        syncThemeControl();
+    });
+});

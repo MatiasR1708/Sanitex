@@ -7,3 +7,37 @@
   --color-sanitex-sky: #cae9ff;
   --color-sanitex-ocean: #5fa8d3;
 }
+
+
+/* Tema oscuro compartido por todas las páginas del sitio. */
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
+html.dark body { background-color: #101f29; color: #e5eff2; }
+html.dark .bg-white { background-color: #172a35; }
+html.dark .bg-white\/90 { background-color: rgb(23 42 53 / 92%); }
+html.dark .bg-white\/95 { background-color: rgb(23 42 53 / 96%); }
+html.dark .bg-gray-50 { background-color: #1d333e; }
+html.dark .bg-gray-100 { background-color: #263c47; }
+html.dark .bg-sanitex-sky,
+html.dark [class*="bg-sanitex-sky/"] { background-color: #203846; }
+html.dark .bg-sanitex-aqua,
+html.dark [class*="bg-sanitex-aqua/"] { background-color: #25434b; }
+html.dark [class*="bg-white/"] { background-color: rgb(23 42 53 / 92%); }
+html.dark .text-\[\#1F2D46\] { color: #e2edf0; }
+html.dark .text-gray-800,
+html.dark .text-gray-700 { color: #e2edf0; }
+html.dark .text-gray-600,
+html.dark .text-gray-500 { color: #bdcdd2; }
+html.dark .text-sanitex-navy { color: #c5e9ec; }
+html.dark .border-gray-50,
+html.dark .border-gray-100,
+html.dark .border-gray-200 { border-color: #344b57; }
+html.dark .border-sanitex-sky { border-color: #426375; }
+html.dark .bg-linear-to-b {
+  background-image: linear-gradient(to bottom, #1b3442 0%, #152832 42%, #101f29 100%);
+}
+html.dark input,
+html.dark select,
+html.dark textarea { background-color: #1d333e; color: #e5eff2; border-color: #49616c; }
+html.dark input::placeholder,
+html.dark textarea::placeholder { color: #a9bbc1; }

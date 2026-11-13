@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      try {
+        if (localStorage.getItem("sanitex-theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (error) {
+        // Si el almacenamiento está desactivado, la página conserva el modo claro.
+      }
+    </script>
     <link rel="stylesheet" href="dist/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,32 +49,33 @@
           <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
             <a
               href="index.html#nosotros"
-              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+              class="text-sm font-medium text-gray-700 whitespace-nowrap"
             >
               Nosotros</a
             >
             <a
               href="servicios.html"
-              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+              class="text-sm font-medium text-gray-700 whitespace-nowrap"
             >
               Servicios</a
             >
             <a
               href="tarifas.html"
-              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+              class="text-sm font-medium text-gray-700 whitespace-nowrap"
             >
               Tarifas</a
             >
             <a
               href="#solicitar-limpieza"
-              class="text-sm font-medium text-gray-700 hover:text-sanitex-navy transition-colors whitespace-nowrap"
+              aria-current="page"
+              class="text-sm font-bold text-sanitex-blue whitespace-nowrap"
             >
               Solicitar limpieza</a
             >
             <a
               href="reseñas-contacto.html"
               aria-current="page"
-              class="text-sm font-bold text-sanitex-blue transition-colors whitespace-nowrap"
+              class="text-sm font-bold text-sanitex-blue whitespace-nowrap"
             >
               Contacto</a
             >
@@ -73,6 +83,44 @@
 
           <!-- Botón de Acción Header (Escritorio lg+) y Botón Hamburguesa (Móviles y Tablets) -->
           <div class="flex items-center gap-4 shrink-0">
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="Activar modo oscuro"
+              aria-pressed="false"
+              class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-sanitex-aqua/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sanitex-blue"
+            >
+              <svg
+                class="theme-icon-dark h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"
+                />
+              </svg>
+              <svg
+                class="theme-icon-light hidden h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                />
+              </svg>
+              <span class="hidden xl:inline">Modo oscuro</span>
+            </button>
             <a
               href="reseñas-contacto.html"
               class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-sanitex-navy text-white text-sm font-semibold shadow-md hover:bg-sanitex-blue transition-all whitespace-nowrap"
@@ -115,25 +163,26 @@
           <nav class="flex flex-col space-y-3 max-w-md mx-auto">
             <a
               href="index.html#nosotros"
-              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+              class="mobile-link text-base font-medium text-gray-700 py-2 border-b border-gray-50"
             >
               Nosotros</a
             >
             <a
               href="servicios.html"
-              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+              class="mobile-link text-base font-medium text-gray-700 py-2 border-b border-gray-50"
             >
               Servicios</a
             >
             <a
               href="tarifas.html"
-              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+              class="mobile-link text-base font-medium text-gray-700 py-2 border-b border-gray-50"
             >
               Tarifas</a
             >
             <a
               href="#solicitar-limpieza"
-              class="mobile-link text-base font-medium text-gray-700 hover:text-sanitex-navy py-2 border-b border-gray-50"
+              aria-current="page"
+              class="mobile-link text-base font-bold text-sanitex-blue py-2 border-b border-gray-50"
             >
               Solicitar limpieza</a
             >
@@ -158,7 +207,7 @@
       </header>
 
       <main>
-        <section class="px-6 py-12 " >
+        <section class="px-6 py-12">
           <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
             <article class="rounded-3xl bg-sanitex-navy p-6 text-white md:p-8">
               <h2 class="font-bold text-2xl">Agenda tu limpieza</h2>
@@ -210,7 +259,10 @@
             </article>
           </div>
         </section>
-        <section id="solicitar-limpieza" class="bg-sanitex-sky px-6 py-12 sm:py-16">
+        <section
+          id="solicitar-limpieza"
+          class="bg-sanitex-sky px-6 py-12 sm:py-16"
+        >
           <div class="mx-auto max-w-3xl">
             <div class="mb-8 text-center">
               <p
@@ -225,7 +277,9 @@
                 Cuéntanos qué necesitas
               </h2>
 
-              <p class="mb-4 mt-4 font-['DM_Sans',sans-serif] text-gray-700 my-12">
+              <p
+                class="mb-4 mt-4 font-['DM_Sans',sans-serif] text-gray-700 my-12"
+              >
                 Déjanos tus datos y los detalles del espacio que quieres
                 limpiar.
               </p>
